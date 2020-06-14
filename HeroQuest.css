@@ -1,11 +1,20 @@
 /* Set the min-width so that when the window is resized the look will stay consistant */
 
+
+
 .charsheet {
-	background-color: #ddd;
+	background-color: "white";
 	min-width: 800px;
+	/*font-family: Impact, Charcoal, sans-serif;*/
+	font-family: 'Piedra';font-size: 22px;
+
+	
 }
 
 /* Universal styling applied to all elements of these types */
+div {
+  
+}
 
 h2 {
 	font-size: 2em;
@@ -20,10 +29,13 @@ label {
 
 input {
 	display: inline-block;
-	width: 165px;
+	width: 20%;
+	text-align: center;
+	/*padding: 15px;*/
 }
 
 img {
+	/*max-height: 100px;*/
 	
 }
 
@@ -33,7 +45,10 @@ textarea {
 
 /* Targetted styling that only effects elements with these classes */
 input.sheet-short {
-	width: 17%;
+	width: 40%;
+}
+input.sheet-long {
+	width: 80%;
 }
 
 select.sheet-dtype {

@@ -1,7 +1,7 @@
 
 
 <div class="row">
-	<img src = "https://github.com/ArdenKel/HeroQuest/blob/master/Heroquest_logo.png?raw=true" width = "90%">
+	<img src = "https://github.com/ArdenKel/HeroQuest/blob/master/Images/Heroquest_logo.png?raw=true" width = "90%">
 </div>
 
 <hr/>
@@ -9,47 +9,55 @@
 	<div class="col">
 		
 
-		<label>Name </label><input type="text" name='attr_character_name' class='sheet-short'>
-        <!-- <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[1d20 + @{agility}]]}}'></button><span class='dee'>d</span> -->
+		<label>Name </label><input type="text" name='attr_character_name' class='sheet-long'>
         <br />
-		<label>Character </label><input type="text" name='attr_character_type' class='sheet-short'>
-        <!-- <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[1d20 + @{smarts}]]}}'></button><span class='dee'>d</span> -->
+		<label>Character </label><input type="text" name='attr_character_type'>
+        <br />
+		<label>Player </label><input type="text" name='attr_player'>
         <br />
 	</div>
 	<div class="col">
-	   <img src = "attr_character_image" width = "90%">
+	   <img src = "https://github.com/ArdenKel/HeroQuest/blob/master/Images/Generic.jpg?raw=true" width = "90%">
     </div>
 </div>
 <div class="2colrow">
 	<div class="col">
-		<label>Body </label> <input type="text" name='attr_Body' class='sheet-short'> / <input type="text" name='attr_Body_max' class='sheet-short'>
+		<label>Body </label> <input type="number" name='attr_Body' class='sheet-short'> / <input type="number" name='attr_Body_max' class='sheet-short'>
 	</div>
 	<div class="col">
-		<label>Mind </label> <input type="text" name='attr_Mind' class='sheet-short'> / <input type="text" name='attr_Mind_max' class='sheet-short'>
-	</div>
-</div>
-<div class="2colrow">
-	<div class="col">
-		<label>Attack </label> <input type="text" name='attr_AttackDice' class='sheet-short'> 
-	</div>
-	<div class="col">
-		<label>Defense </label> <input type="text" name='attr_DefendDice' class='sheet-short'> 
+		<label>Mind </label> <input type="number" name='attr_Mind' class='sheet-short'> / <input type="number" name='attr_Mind_max' class='sheet-short'>
 	</div>
 </div>
 <div class="2colrow">
 	<div class="col">
-		<label>Gold </label> <input type="text" name='attr_gold' class='sheet-short'> 
-		<h2">Equipment</h2>
+		<label>Attack </label> <input type="number" name='attr_AttackDice' class='sheet-short'> 
+		<button type="roll" value="/roll @{AttackDice}t[Attack]" name="roll_HeroAttack"></button>
+       
+	</div>
+	<div class="col">
+		<label>Defense </label> <input type="number" name='attr_DefendDice' class='sheet-short'> 
+		<button type="roll" value="/roll @{DefendDice}t[HeroDefend]" name="roll_HeroDefend"></button>
+	</div>
+</div>
+<div class="2colrow">
+	<div class="col">
+		<label>Gold </label> <input type="number" name='attr_gold' class='sheet-short'> 
+	</div>
+</div>
+<div class="2colrow">
+	<div class="col">
+		<h2>Equipment</h2>
         <fieldset class="repeating_equipment">
             <input type="text" name="attr_equipment" />
         </fieldset>
 	</div>
 	<div class="col">
-		<h2">Completed Adventures</h2>
+		<h2>Completed Adventures</h2>
 		 <fieldset class="repeating_quests">
             <input type="text" name="attr_quests" />
         </fieldset>
 	</div>
 </div>
-	
+
+
    
